@@ -24,10 +24,5 @@
 # Go workspace file
 go.work
 
-# executables
-telnet-simple
-telnet-multi
-telnet-http
-dns-server
 
 # End of https://www.toptal.com/developers/gitignore/api/go
