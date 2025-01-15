@@ -8,8 +8,8 @@ import (
 
 // Map of domain names to IPs
 var domainMap = map[string]string{
-	"host1.lan.": "192.168.1.100",
-	"host2.lan.": "192.168.1.101",
+	"e.lan.":     "192.168.1.127",
+	"host2.lan.": "192.168.0.101",
 	"host3.lan.": "192.168.1.102",
 }
 

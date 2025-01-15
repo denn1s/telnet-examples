@@ -33,6 +33,9 @@ func handleClient(client Client, clients map[string]Client) {
 			return
 		}
 
+		// Print received message to console
+		fmt.Printf("> %s: %s\n", client.name, message)
+
 		// Broadcast the message to all clients
 		broadcast(fmt.Sprintf("%s: %s", client.name, message), clients)
 	}

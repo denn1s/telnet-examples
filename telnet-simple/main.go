@@ -29,21 +29,16 @@ func main() {
 	fmt.Printf("Client connected from %s\n", clientAddr)
 	defer conn.Close()
 
-	// Start goroutine to read from client
-	go func() {
-		reader := bufio.NewReader(conn)
-		for {
-			message, err := reader.ReadString('\n')
-			if err != nil {
-				fmt.Println("Client disconnected")
-				os.Exit(0)
-			}
-			fmt.Printf("Received: %s", message)
-			// Echo the message back to client
-			conn.Write([]byte("Server received: " + message))
+	reader := bufio.NewReader(conn)
+	for {
+		message, err := reader.ReadString('\n')
+		if err != nil {
+			fmt.Println("Client disconnected")
+			os.Exit(0)
 		}
-	}()
-
-	// Keep main thread alive
-	select {}
+		fmt.Printf("Received: %s", message)
+		// Echo the message back to client
+		conn.Write([]byte("Server received: " + message))
+		os.Exit(0)
+	}
 }
