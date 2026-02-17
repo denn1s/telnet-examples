@@ -48,17 +48,16 @@ func handleClient(conn net.Conn) {
 
 	// Prepare HTTP response
 	response := "HTTP/1.1 200 OK\r\n" +
-		"Content-Type: text/plain\r\n" +
+		"Content-Type: text/html\r\n" +
 		"\r\n" +
-		"Hello World!\r\n" +
-		"Path: " + path
+		"<html><h1>Hello World!</h1></html>\r\n"
 
 	// Send response
 	conn.Write([]byte(response))
 }
 
 func main() {
-	port := ":8080"
+	port := ":80"
 	listener, err := net.Listen("tcp", port)
 	if err != nil {
 		fmt.Printf("Failed to start server: %v\n", err)

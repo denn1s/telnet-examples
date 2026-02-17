@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	port := ":2323"
+	port := ":23"
 	listener, err := net.Listen("tcp", port)
 	if err != nil {
 		fmt.Printf("Failed to start server: %v\n", err)

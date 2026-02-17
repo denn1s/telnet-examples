@@ -42,7 +42,7 @@ func handleClient(client Client, clients map[string]Client) {
 }
 
 func main() {
-	port := ":2323" // Port with colon prefix
+	port := ":23" // Port with colon prefix
 	listener, err := net.Listen("tcp", port)
 	if err != nil {
 		fmt.Printf("Failed to start server: %v\n", err)

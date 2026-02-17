@@ -44,15 +44,15 @@ func main() {
 	flagFiltersActive := filters.showSYN || filters.showACK || filters.showFIN ||
 		filters.showPSH || filters.showRST || filters.showURG
 
-	devices, err := pcap.FindAllDevs()
-	if err != nil {
-		log.Fatal(err)
-	}
+	// devices, err := pcap.FindAllDevs()
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
 
-	// for lan testing:
-	handle, err := pcap.OpenLive(devices[0].Name, 1600, true, pcap.BlockForever)
+	// // for lan testing:
+	// handle, err := pcap.OpenLive(devices[0].Name, 1600, true, pcap.BlockForever)
 	// for localhost testing:
-	// handle, err := pcap.OpenLive("lo", 1600, true, pcap.BlockForever)
+	handle, err := pcap.OpenLive("lo", 1600, true, pcap.BlockForever)
 	if err != nil {
 		log.Fatal(err)
 	}

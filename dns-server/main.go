@@ -8,9 +8,9 @@ import (
 
 // Map of domain names to IPs
 var domainMap = map[string]string{
-	"e.lan.":     "192.168.1.127",
-	"host2.lan.": "192.168.0.101",
-	"host3.lan.": "192.168.1.102",
+	"robertillo.com.": "192.168.1.130",
+	"bran.neto.":      "192.168.1.145",
+	"victor.net.":     "192.168.1.132",
 }
 
 func handleDNS(w dns.ResponseWriter, r *dns.Msg) {
