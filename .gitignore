@@ -25,4 +25,8 @@
 go.work
 
 
+# Compiled Go binaries (Linux)
+http-rest/http-rest
+http-multi/telnet-http
+
 # End of https://www.toptal.com/developers/gitignore/api/go
