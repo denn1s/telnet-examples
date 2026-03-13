@@ -28,5 +28,8 @@ go.work
 # Compiled Go binaries (Linux)
 http-rest/http-rest
 http-multi/telnet-http
+http-chat/http-chat
+http-chat-sqlite/http-chat-sqlite
+http-chat-client/http-chat-client
 
 # End of https://www.toptal.com/developers/gitignore/api/go

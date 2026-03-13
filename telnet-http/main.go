@@ -57,7 +57,7 @@ func handleClient(conn net.Conn) {
 }
 
 func main() {
-	port := ":80"
+	port := ":3000"
 	listener, err := net.Listen("tcp", port)
 	if err != nil {
 		fmt.Printf("Failed to start server: %v\n", err)
